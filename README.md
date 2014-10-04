@@ -1,4 +1,4 @@
-duck-hunt-js
+Duck Junt Js
 ============
 
 Jogo Duck Junt Js
