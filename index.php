@@ -6,9 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 	</head>
 	<body>
-		<div class="hunt-space" onclick="return shot();">
-			<img src="image/duck-flying-right.png" class='duck-flying-one' onclick="return rightShot();">
-			<!-- <img src="image/duck-flying-left.png" class='duck-flying-two' onclick="alert('BAAANG');"> -->
+		<div id="hunt-space" class="hunt-space">
+			<!-- <img src="image/duck-flying-right.png" class='duck-flying-one' onclick="return rightShot();"> -->
+			<!-- <img src="image/duck-flying-left.png" class='duck-flying-two' onclick="return rightShot();"> -->
 		</div>
 		<div class="hunter-stats">
 			<p>Tiros: <span id='num-bullets'>15</span></p><input type="button" value='Recarregar' onclick="return reloadGun();">
