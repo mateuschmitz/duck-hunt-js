@@ -14,27 +14,52 @@
 	/*background: #B1B1B1;*/
 }
 
-.duck-flying-one {
+.duck-flying {
 	width: 100px;
 	height: 54px;
-	/*background: green;*/
-	animation: fly-one 20s infinite;
-	/*z-index: 999;*/
 }
 
-.duck-flying-two {
-	width: 100px;
-	height: 54px;
-	/*background: green;*/
-	animation: fly-two 20s infinite;
+.one {
+	animation: fly-one 15s infinite;
+}
+
+.two {
+	animation: fly-two 25s infinite;
+}
+
+.three {
+	animation: fly-three 15s infinite;
+}
+
+.four {
+	animation: fly-four 15s infinite;
+}
+
+.five {
+	animation: fly-five 15s infinite;
 }
 
 @keyframes fly-one {
 	0%   {margin-left: -10%;} 
-	100% {margin-left: 100%;}
+	100% {margin-left: 110%;}
 }
 
 @keyframes fly-two {
+	0%   {margin-left: 110%;} 
+	100% {margin-left: -10%;}
+}
+
+@keyframes fly-three {
+	0%   {margin-left: 110%;} 
+	100% {margin-left: -10%;}
+}
+
+@keyframes fly-four {
+	0%   {margin-left: -10%;} 
+	100% {margin-left: 110%;}
+}
+
+@keyframes fly-five {
 	0%   {margin-left: 110%;} 
 	100% {margin-left: -10%;}
 }
