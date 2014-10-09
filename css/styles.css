@@ -1,9 +1,14 @@
+body {
+	background: #B1B1B1;
+}
+
 .hunt-space {
 	width: 100%;
-	height: 400px;
+	height: 500px;
 	cursor: crosshair;
 	margin: 0 auto;
-	border: solid 1px #666;
+	/*border: solid 1px #666;*/
+	background: #FFF;
 	overflow: hidden;
 }
 
@@ -11,55 +16,103 @@
 	width: 100%;
 	height: 100px;
 	margin: 0 auto;
-	/*background: #B1B1B1;*/
 }
 
-.duck-flying {
-	width: 100px;
-	height: 54px;
+/**
+ * voo
+ */
+.duck-flying-right {
+	width: 104px;
+	height: 80px;
+	background-image: url('../image/sprite-duck-right.png');
+	animation: fly .8s steps(9) infinite;
 }
 
-.one {
-	animation: fly-one 15s infinite;
+.duck-flying-left {
+	width: 104px;
+	height: 80px;
+	background-image: url('../image/sprite-duck-left.png');
+	animation: fly .8s steps(9) infinite;
 }
 
-.two {
-	animation: fly-two 25s infinite;
+@keyframes fly {
+	100% {background-position: -940px;}
 }
 
-.three {
-	animation: fly-three 15s infinite;
+/**
+ * move-one
+ */
+#duck-move-one {
+	animation: move_one 15s infinite;
 }
 
-.four {
-	animation: fly-four 15s infinite;
-}
-
-.five {
-	animation: fly-five 15s infinite;
-}
-
-@keyframes fly-one {
-	0%   {margin-left: -10%;} 
+@keyframes move_one {
+	0%   {margin-left: -10%;}
+	50%  {margin-left: 30%;}
 	100% {margin-left: 110%;}
 }
 
-@keyframes fly-two {
-	0%   {margin-left: 110%;} 
+/**
+ * move-two
+ */
+#duck-move-two {
+	animation: move_two 15s infinite;
+}
+
+@keyframes move_two {
+	0%   {margin-left: 110%;}
+	50%  {margin-left: 70%;}
 	100% {margin-left: -10%;}
 }
 
-@keyframes fly-three {
-	0%   {margin-left: 110%;} 
-	100% {margin-left: -10%;}
+/**
+ * move-three
+ */
+#duck-move-three {
+	animation: move_three 15s infinite;
 }
 
-@keyframes fly-four {
-	0%   {margin-left: -10%;} 
+@keyframes move_three {
+	0%   {margin-left: -10%;}
+	50%  {margin-left: 30%;}
 	100% {margin-left: 110%;}
 }
 
-@keyframes fly-five {
-	0%   {margin-left: 110%;} 
+/**
+ * move-four
+ */
+#duck-move-four {
+	animation: move_four 15s infinite;
+}
+
+@keyframes move_four {
+	0%   {margin-left: 110%;}
+	50%  {margin-left: 70%;}
+	100% {margin-left: -10%;}
+}
+
+/**
+ * move-five
+ */
+#duck-move-five {
+	animation: move_five 15s infinite;
+}
+
+@keyframes move_five {
+	0%   {margin-left: -10%;}
+	50%  {margin-left: 30%;}
+	100% {margin-left: 110%;}
+}
+
+/**
+ * move-six
+ */
+#duck-move-six {
+	animation: move_six 15s infinite;
+}
+
+@keyframes move_six {
+	0%   {margin-left: 110%;}
+	50%  {margin-left: 70%;}
 	100% {margin-left: -10%;}
 }

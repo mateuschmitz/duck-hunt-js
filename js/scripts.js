@@ -1,31 +1,48 @@
 /**
+ * Start App
  */
-window.onload = function () {
-	while ((document.getElementsByClassName('duck-flying').length) < 5) {
-		
+function runApp () {
+	while ((document.getElementsByClassName('duck').length) < 6) {
 		generateAleatoryDuck();
-		setTimeout(1000);
+	}	
+}
 
-	}
-};
-
+/**
+ * Adiciona novos patos a tela
+ */
 function generateAleatoryDuck () {
 
-	var animationClass = ['one', 'two'];
-	var duck = document.createElement('img');
+	var animationClass = ['one', 'two', 'three', 'four', 'five', 'six'];
 
 	for (var i in animationClass) {
-		if ((document.getElementsByClassName(animationClass[i]).length) === 0) {
-			duck.setAttribute('src', 'image/duck-flying-' + animationClass[i] + '.png');
-			duck.setAttribute('class', 'duck-flying ' + animationClass[i]);
+		if (document.getElementById('duck-move-' + animationClass[i]) == null) {
+
+			//cria a div externa com movimento
+			var duck_move = document.createElement('div');
+			duck_move.setAttribute('id', 'duck-move-' + animationClass[i]);
+			duck_move.setAttribute('class', 'duck');
+			document.getElementById('hunt-space').appendChild(duck_move);
+
+			//cria a div com o sprite do pato
+			var duck_flying = document.createElement('div');
+
+			if ((animationClass[i] == 'two') || (animationClass[i] == 'four') || (animationClass[i] == 'six')) {
+				duck_flying.setAttribute('class', 'duck-flying-left');	
+			} else {
+				duck_flying.setAttribute('class', 'duck-flying-right');
+			}
+			
+			duck_flying.setAttribute('onclick', 'return rightShot("' + animationClass[i] + '");');
+			duck_flying.setAttribute('duck', animationClass[i]);
+			document.getElementById('duck-move-' + animationClass[i]).appendChild(duck_flying);
 			break;
 		}
 	}
-
-	duck.setAttribute('onclick', 'return rightShot();');
-	document.getElementById('hunt-space').appendChild(duck);
 }
 
+/**
+ * Função que controla o número de balas restantes na arma
+ */
 shot = function() {
 	numBullets = document.getElementById('num-bullets').innerHTML;
 	
@@ -36,14 +53,34 @@ shot = function() {
 	}
 };
 
-rightShot = function() {
-	numAssertions = document.getElementById('num-assertions').innerHTML;
-	numAssertions++;
+/**
+ * Caso o pato seja acertado, aumenta o score
+ */
+rightShot = function(duck) {
+	numBullets = document.getElementById('num-bullets').innerHTML;
 
-	this.style.display = 'none';
-	document.getElementById('num-assertions').innerHTML = numAssertions;
+	if (numBullets > 0) {
+		numAssertions = document.getElementById('num-assertions').innerHTML;
+		numAssertions++;
+
+		document.getElementById('num-assertions').innerHTML = numAssertions;
+		document.getElementById('hunt-space').removeChild(document.getElementById('duck-move-' + duck));
+		generateAleatoryDuck();
+	} 
 };
 
+/**
+ * Recarrega a arma(+15 balas)
+ */
 reloadGun = function() {
 	document.getElementById('num-bullets').innerHTML = 15;
 };
+
+function sleep(milliseconds) {
+	var start = new Date().getTime();
+	for (var i = 0; i < 1000; i++) {
+	if ((new Date().getTime() - start) > milliseconds){
+		break;
+		}
+	}
+}
