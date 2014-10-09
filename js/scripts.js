@@ -2,9 +2,9 @@
  * Start App
  */
 function runApp () {
-	while ((document.getElementsByClassName('duck').length) < 6) {
+	while ((document.getElementsByClassName('duck').length) < 1) {
 		generateAleatoryDuck();
-	}	
+	}
 }
 
 /**
@@ -12,10 +12,10 @@ function runApp () {
  */
 function generateAleatoryDuck () {
 
-	var animationClass = ['one', 'two', 'three', 'four', 'five', 'six'];
+	var animationClass = ['one', 'two', 'three', 'four', 'five'];
 
 	for (var i in animationClass) {
-		if (document.getElementById('duck-move-' + animationClass[i]) == null) {
+		if (document.getElementById('duck-move-' + animationClass[i]) === null) {
 
 			//cria a div externa com movimento
 			var duck_move = document.createElement('div');
@@ -27,7 +27,7 @@ function generateAleatoryDuck () {
 			var duck_flying = document.createElement('div');
 
 			if ((animationClass[i] == 'two') || (animationClass[i] == 'four') || (animationClass[i] == 'six')) {
-				duck_flying.setAttribute('class', 'duck-flying-left');	
+				duck_flying.setAttribute('class', 'duck-flying-left');
 			} else {
 				duck_flying.setAttribute('class', 'duck-flying-right');
 			}
@@ -66,7 +66,7 @@ rightShot = function(duck) {
 		document.getElementById('num-assertions').innerHTML = numAssertions;
 		document.getElementById('hunt-space').removeChild(document.getElementById('duck-move-' + duck));
 		generateAleatoryDuck();
-	} 
+	}
 };
 
 /**
