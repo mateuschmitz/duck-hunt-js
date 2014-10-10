@@ -2,7 +2,7 @@
  * Start App
  */
 function runApp () {
-	while ((document.getElementsByClassName('duck').length) < 1) {
+	while ((document.getElementsByClassName('duck').length) < 2) {
 		generateAleatoryDuck();
 	}
 }

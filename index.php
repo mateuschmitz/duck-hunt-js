@@ -11,10 +11,9 @@
 		</div>
 
 		<div class="hunter-stats">
-			<p>Tiros: <span id='num-bullets'>15</span></p>
+			<p>Tiros: <span id='num-bullets'>15</span>&nbsp;Acertos: <span id='num-assertions'>0</span></p>
 			<input type="button" value='Recarregar' onclick="return reloadGun();">
 			<input type="button" value='START' onclick="return runApp();">
-			<p>Acertos: <span id='num-assertions'>0</span></p>
 		</div>
 
 		<script type="text/javascript" src="js/scripts.js"></script>
