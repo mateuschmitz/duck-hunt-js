@@ -44,7 +44,7 @@ body {
  * move-one
  */
 #duck-move-one {
-	animation: move_one 15s infinite;
+	animation: move_one 40s infinite;
 }
 
 @keyframes move_one {
@@ -75,7 +75,7 @@ body {
  * move-two
  */
 #duck-move-two {
-	animation: move_two 15s infinite;
+	animation: move_two 40s infinite;
 }
 
 @keyframes move_two {
@@ -106,7 +106,7 @@ body {
  * move-three
  */
 #duck-move-three {
-	animation: move_three 15s infinite;
+	animation: move_three 45s infinite;
 }
 
 @keyframes move_three {
@@ -119,7 +119,7 @@ body {
  * move-four
  */
 #duck-move-four {
-	animation: move_four 15s infinite;
+	animation: move_four 45s infinite;
 }
 
 @keyframes move_four {
@@ -132,7 +132,7 @@ body {
  * move-five
  */
 #duck-move-five {
-	animation: move_five 15s infinite;
+	animation: move_five 45s infinite;
 }
 
 @keyframes move_five {
