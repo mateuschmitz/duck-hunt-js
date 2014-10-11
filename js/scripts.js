@@ -1,8 +1,11 @@
+var errors = 0;
+
 /**
  * Start App
  */
 function runApp () {
-	while ((document.getElementsByClassName('duck').length) < 5) {
+	document.getElementById('hunt-space').removeChild(document.getElementsByClassName('start-buton-screen')[0]);
+	while ((document.getElementsByClassName('duck').length) < 5	) {
 		generateAleatoryDuck();
 	}
 }
@@ -22,6 +25,18 @@ function generateAleatoryDuck () {
 			duck_move.setAttribute('id', 'duck-move-' + animationClass[i]);
 			duck_move.setAttribute('class', 'duck');
 			document.getElementById('hunt-space').appendChild(duck_move);
+
+			// if (parseInt(document.getElementById('num-assertions').innerHTML) > 500) {
+			// 	duck_move.setAttribute(
+			// 					'style', 
+			// 					'animation: move_' + animationClass[i] + ' 1s infinite;'
+			// 					);
+			// } else {
+				duck_move.setAttribute(
+								'style', 
+								'animation: move_' + animationClass[i] + ' ' + (Math.floor(Math.random() * 20) + 5) + 's infinite;'
+								);
+			// }
 
 			//cria a div com o sprite do pato
 			var duck_flying = document.createElement('div');
@@ -48,8 +63,16 @@ shot = function() {
 	
 	if (numBullets > 0) {
 		document.getElementById('num-bullets').innerHTML = numBullets - 1;
+		errors++;
 	} else {
 		alert('Recarregue sua arma');
+	}
+
+	if (errors >= 5) {
+		numErrors = parseInt(document.getElementById('num-lifes').innerHTML);
+		numErrors--;
+		document.getElementById('num-lifes').innerHTML = numErrors;
+		errors = 0;
 	}
 };
 
@@ -60,11 +83,12 @@ rightShot = function(duck) {
 	numBullets = document.getElementById('num-bullets').innerHTML;
 
 	if (numBullets > 0) {
-		numAssertions = document.getElementById('num-assertions').innerHTML;
-		numAssertions++;
+		numAssertions = parseInt(document.getElementById('num-assertions').innerHTML);
+		numAssertions += 100;
 
 		document.getElementById('num-assertions').innerHTML = numAssertions;
 		document.getElementById('hunt-space').removeChild(document.getElementById('duck-move-' + duck));
+		errors = 0;
 		generateAleatoryDuck();
 	}
 };
@@ -75,12 +99,3 @@ rightShot = function(duck) {
 reloadGun = function() {
 	document.getElementById('num-bullets').innerHTML = 15;
 };
-
-function sleep(milliseconds) {
-	var start = new Date().getTime();
-	for (var i = 0; i < 1000; i++) {
-	if ((new Date().getTime() - start) > milliseconds){
-		break;
-		}
-	}
-}

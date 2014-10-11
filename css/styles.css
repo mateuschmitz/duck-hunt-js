@@ -18,8 +18,60 @@ body {
 	width: 80%;
 	height: 50px;
 	margin: 0 auto;
-	background: #000;
+	background: #BBB;
 	border: solid 1px #000;
+}
+
+.start-buton-screen {
+	width: auto;
+	height: auto;
+	font-size: 35px;
+	margin-top: 220px;
+	margin-left: 42%;
+}
+
+.reload-button {
+	float: right;
+	width: auto;
+	height: 50px;
+}
+
+.div-bullets{
+	width: 200px;
+	height: 50px;
+	background: ;
+	float: right;
+	font-size: 20px;
+}
+
+.div-bullets span {
+	margin-left: 50px;
+}
+
+.div-score {
+	width: 200px;
+	height: 50px;
+	background: ;
+	float: left;
+	font-size: 20px;
+}
+
+.div-score span {
+	margin-left: 50px;
+}
+
+.div-lifes {
+	width: 200px;
+	height: 50px;
+	background: ;
+	float: left;
+	font-size: 20px;
+}
+
+.div-lifes img {
+	width: 20px;
+	height: 20px;
+	margin-left: 110px
 }
 
 #start-button {
@@ -51,100 +103,154 @@ body {
 /**
  * move-one
  */
-#duck-move-one {
-	animation: move_one 40s infinite;
-}
+/*#duck-move-one {
+	animation: move_one 10s infinite;
+}*/
 
 @keyframes move_one {
 	0%   {margin-left: -10%;  margin-top:  5px;}
 	5%   {margin-left:  10%;  margin-top: 10px;}
-	10%  {margin-left:  15%;  margin-top: 25px;}
+	10%  {margin-left:  15%;  margin-top: 10px;}
 	15%  {margin-left:  15%;  margin-top: 15px;}
 	20%  {margin-left:  20%;  margin-top:  5px;}
 	25%  {margin-left:  25%;  margin-top:  5px;}
 	30%  {margin-left:  25%;  margin-top: 10px;}
-	35%  {margin-left:  30%;  margin-top: 25px;}
-	40%  {margin-left:  40%;  margin-top: 20px;}
+	35%  {margin-left:  30%;  margin-top: 15px;}
+	40%  {margin-left:  40%;  margin-top: 10px;}
 	45%  {margin-left:  45%;  margin-top: 15px;}
 	50%  {margin-left:  55%;  margin-top:  0;}
 	55%  {margin-left:  60%;  margin-top: 15px;}
-	60%  {margin-left:  75%;  margin-top: 25px;}
-	65%  {margin-left:  75%;  margin-top: 20px;}
+	60%  {margin-left:  75%;  margin-top: 10px;}
+	65%  {margin-left:  75%;  margin-top: 15px;}
 	70%  {margin-left:  80%;  margin-top: 10px;}
 	75%  {margin-left:  85%;  margin-top:  5px;}
 	80%  {margin-left:  85%;  margin-top:  6px;}
 	85%  {margin-left:  90%;  margin-top: 15px;}
-	90%  {margin-left:  95%;  margin-top: 20px;}
-	95%  {margin-left: 100%;  margin-top: 25px;}
-	100% {margin-left: 100%;  margin-top:  0;}
+	90%  {margin-left:  95%;  margin-top: 13px;}
+	95%  {margin-left:  98%;  margin-top: 10px;}
+	100% {margin-left: 110%;  margin-top:  0;}
 }
 
 /**
  * move-two
  */
-#duck-move-two {
-	animation: move_two 40s infinite;
-}
+/*#duck-move-two {
+	animation: move_two 15s infinite;
+}*/
 
 @keyframes move_two {
 	0%   {margin-left: 100%; margin-top:  5px;}
-	5%   {margin-left:  85%; margin-top: 10px;}
-	10%  {margin-left:  80%; margin-top: 25px;}
-	15%  {margin-left:  80%; margin-top: 15px;}
+	5%   {margin-left:  84%; margin-top: 10px;}
+	10%  {margin-left:  78%; margin-top: 12px;}
+	15%  {margin-left:  78%; margin-top: 15px;}
 	20%  {margin-left:  75%; margin-top:  5px;}
 	25%  {margin-left:  70%; margin-top:  5px;}
-	30%  {margin-left:  65%; margin-top: 10px;}
-	35%  {margin-left:  60%; margin-top: 30px;}
-	40%  {margin-left:  55%; margin-top: 25px;}
-	45%  {margin-left:  50%; margin-top: 15px;}
-	50%  {margin-left:  45%; margin-top:  0}
-	55%  {margin-left:  40%; margin-top: 15px;}
-	60%  {margin-left:  40%; margin-top: 25px;}
-	65%  {margin-left:  30%; margin-top: 20px;}
-	70%  {margin-left:  25%; margin-top: 10px;}
+	30%  {margin-left:  68%; margin-top: 10px;}
+	35%  {margin-left:  64%; margin-top: 15px;}
+	40%  {margin-left:  60%; margin-top: 13px;}
+	45%  {margin-left:  50%; margin-top:  9px;}
+	50%  {margin-left:  49%; margin-top:  4px}
+	55%  {margin-left:  45%; margin-top: 10px;}
+	60%  {margin-left:  39%; margin-top: 12px;}
+	65%  {margin-left:  35%; margin-top: 15px;}
+	70%  {margin-left:  28%; margin-top: 10px;}
 	75%  {margin-left:  25%; margin-top:  5px;}
-	80%  {margin-left:  20%; margin-top:  6px;}
+	80%  {margin-left:  21%; margin-top:  6px;}
 	85%  {margin-left:  20%; margin-top: 15px;}
-	90%  {margin-left:  15%; margin-top: 20px;}
-	95%  {margin-left: 100%; margin-top: 25px;}
-	100% {margin-left: 110%; margin-top:  0;}
+	90%  {margin-left:  18%; margin-top: 11px;}
+	95%  {margin-left:  12%; margin-top:  2px;}
+	100% {margin-left: -10%; margin-top:  0;}
 }
 
 /**
  * move-three
  */
-#duck-move-three {
-	animation: move_three 45s infinite;
-}
+/*#duck-move-three {
+	animation: move_three 5s infinite;
+}*/
 
 @keyframes move_three {
-	0%   {margin-left: -10%;}
-	50%  {margin-left: 30%;}
-	100% {margin-left: 110%;}
+	0%   {margin-left: -10%;  margin-top: 10px;}
+	5%   {margin-left:  10%;  margin-top:  8px;}
+	10%  {margin-left:  13%;  margin-top: 12px;}
+	15%  {margin-left:  15%;  margin-top:  1px;}
+	20%  {margin-left:  19%;  margin-top:  4px;}
+	25%  {margin-left:  25%;  margin-top: 10px;}
+	30%  {margin-left:  26%;  margin-top: 10px;}
+	35%  {margin-left:  29%;  margin-top: 13px;}
+	40%  {margin-left:  30%;  margin-top: 11px;}
+	45%  {margin-left:  38%;  margin-top: 10px;}
+	50%  {margin-left:  45%;  margin-top:  0;}
+	55%  {margin-left:  50%;  margin-top: 10px;}
+	60%  {margin-left:  60%;  margin-top:  9px;}
+	65%  {margin-left:  72%;  margin-top:  7px;}
+	70%  {margin-left:  78%;  margin-top:  5px;}
+	75%  {margin-left:  81%;  margin-top:  8px;}
+	80%  {margin-left:  85%;  margin-top:  6px;}
+	85%  {margin-left:  93%;  margin-top: 10px;}
+	90%  {margin-left:  97%;  margin-top: 13px;}
+	95%  {margin-left: 	99%;  margin-top:  2px;}
+	100% {margin-left: 100%;  margin-top:  0;}
 }
 
 /**
  * move-four
  */
-#duck-move-four {
-	animation: move_four 45s infinite;
-}
+/*#duck-move-four {
+	animation: move_four 20s infinite;
+}*/
 
 @keyframes move_four {
-	0%   {margin-left: 110%;}
-	50%  {margin-left: 70%;}
-	100% {margin-left: -10%;}
+	0%   {margin-left: 100%; margin-top:  5px;}
+	5%   {margin-left:  88%; margin-top: 10px;}
+	10%  {margin-left:  85%; margin-top:  9px;}
+	15%  {margin-left:  80%; margin-top: 10px;}
+	20%  {margin-left:  78%; margin-top:  5px;}
+	25%  {margin-left:  73%; margin-top:  7px;}
+	30%  {margin-left:  69%; margin-top: 10px;}
+	35%  {margin-left:  65%; margin-top: 12px;}
+	40%  {margin-left:  59%; margin-top: 15px;}
+	45%  {margin-left:  52%; margin-top: 11px;}
+	50%  {margin-left:  47%; margin-top:  8px}
+	55%  {margin-left:  43%; margin-top: 10px;}
+	60%  {margin-left:  40%; margin-top:  6px;}
+	65%  {margin-left:  38%; margin-top:  2px;}
+	70%  {margin-left:  26%; margin-top:  1px;}
+	75%  {margin-left:  22%; margin-top:  7px;}
+	80%  {margin-left:  20%; margin-top: 10px;}
+	85%  {margin-left:  17%; margin-top: 15px;}
+	90%  {margin-left:  15%; margin-top: 13px;}
+	95%  {margin-left:  12%; margin-top: 11px;}
+	100% {margin-left: -10%; margin-top:  0;}
 }
 
 /**
  * move-five
  */
-#duck-move-five {
-	animation: move_five 45s infinite;
-}
+/*#duck-move-five {
+	animation: move_five 17s infinite;
+}*/
 
 @keyframes move_five {
-	0%   {margin-left: -10%;}
-	50%  {margin-left: 30%;}
-	100% {margin-left: 110%;}
+	0%   {margin-left: -10%;  margin-top: 11px;}
+	5%   {margin-left:   9%;  margin-top: 10px;}
+	10%  {margin-left:  12%;  margin-top:  9px;}
+	15%  {margin-left:  15%;  margin-top: 11px;}
+	20%  {margin-left:  21%;  margin-top:  5px;}
+	25%  {margin-left:  23%;  margin-top:  6px;}
+	30%  {margin-left:  28%;  margin-top:  8px;}
+	35%  {margin-left:  31%;  margin-top: 10px;}
+	40%  {margin-left:  38%;  margin-top:  1px;}
+	45%  {margin-left:  43%;  margin-top: 12px;}
+	50%  {margin-left:  51%;  margin-top:  7px;}
+	55%  {margin-left:  59%;  margin-top: 15px;}
+	60%  {margin-left:  64%;  margin-top: 10px;}
+	65%  {margin-left:  71%;  margin-top:  8px;}
+	70%  {margin-left:  78%;  margin-top:  7px;}
+	75%  {margin-left:  82%;  margin-top:  5px;}
+	80%  {margin-left:  87%;  margin-top: 12px;}
+	85%  {margin-left:  90%;  margin-top: 15px;}
+	90%  {margin-left:  96%;  margin-top: 15px;}
+	95%  {margin-left:  99%;  margin-top: 10px;}
+	100% {margin-left: 110%;  margin-top:  5px;}
 }
