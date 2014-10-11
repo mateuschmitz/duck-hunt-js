@@ -1,10 +1,17 @@
 var errors = 0;
+var assert  = 0;
 
 /**
  * Start App
  */
 function runApp () {
-	document.getElementById('hunt-space').removeChild(document.getElementsByClassName('start-buton-screen')[0]);
+	if (document.getElementsByClassName("final-stats")[0] !== null) {
+		document.getElementsByClassName("final-stats")[0].style.display = "none";
+	}
+
+	if (document.getElementsByClassName('start-buton-screen')[0] !== null) {
+		// document.getElementById('hunt-space').removeChild(document.getElementsByClassName('start-buton-screen')[0]);
+	}
 	while ((document.getElementsByClassName('duck').length) < 5	) {
 		generateAleatoryDuck();
 	}
@@ -69,10 +76,18 @@ shot = function() {
 	}
 
 	if (errors >= 5) {
-		numErrors = parseInt(document.getElementById('num-lifes').innerHTML);
-		numErrors--;
-		document.getElementById('num-lifes').innerHTML = numErrors;
-		errors = 0;
+		numLifes = parseInt(document.getElementById('num-lifes').innerHTML);
+
+		if (numLifes == 1) {
+			huntSpace = document.getElementById('hunt-space');
+			while (huntSpace.firstChild) {
+    			huntSpace.removeChild(huntSpace.firstChild);
+			}
+		} else {
+			errors = 0;
+		}
+		numLifes--;
+		document.getElementById('num-lifes').innerHTML = numLifes;
 	}
 };
 
@@ -85,6 +100,13 @@ rightShot = function(duck) {
 	if (numBullets > 0) {
 		numAssertions = parseInt(document.getElementById('num-assertions').innerHTML);
 		numAssertions += 100;
+		assert++;
+
+		if (assert == 5) {
+			numLifes = document.getElementById('num-lifes').innerHTML;
+			numLifes++;
+			document.getElementById('num-lifes').innerHTML = numLifes;
+		}
 
 		document.getElementById('num-assertions').innerHTML = numAssertions;
 		document.getElementById('hunt-space').removeChild(document.getElementById('duck-move-' + duck));

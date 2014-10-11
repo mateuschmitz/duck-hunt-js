@@ -74,6 +74,16 @@ body {
 	margin-left: 110px
 }
 
+.final-stats {
+	width: 230px;
+	height: 200px;
+	font-size: 35px;
+	margin-top: 150px;
+	margin-left: 40%;
+	background: blue;
+	text-align: center;
+}
+
 #start-button {
 	height: 49px;
 	width: 80px;
