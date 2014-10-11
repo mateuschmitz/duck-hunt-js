@@ -1,22 +1,30 @@
 body {
-	background: #FFF;
+	background: #F1F1F1;
 }
 
 .hunt-space {
-	width: 85%;
+	width: 80%;
 	height: 465px;
 	cursor: crosshair;
 	margin: 0 auto;
 	border: solid 1px #666;
 	background: #FFF;
 	overflow: hidden;
+	background-image: url('../image/background-hunt.jpg');
+	background-size: 100%;
 }
 
 .hunter-stats {
-	width: 85%;
-	height: 100px;
+	width: 80%;
+	height: 50px;
 	margin: 0 auto;
-	display: table;
+	background: #000;
+	border: solid 1px #000;
+}
+
+#start-button {
+	height: 49px;
+	width: 80px;
 }
 
 /**
