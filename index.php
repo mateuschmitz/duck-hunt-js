@@ -8,13 +8,13 @@
 	<body>
 		
 		<div id="hunt-space" class="hunt-space" onclick="return shot();">
-			<!-- <input type='button' value='START ►' class='start-buton-screen' onclick="return runApp();"> -->
-			<div class='final-stats'>
+			<input type='button' value='START ►' class='start-button-screen' onclick="return runApp('start-button-screen');">
+			<!-- <div class='final-stats'>
 				GAME OVER<br />
 				SCORE <br />
 				<span id='final-score'></span>
-				<input type='button' value='Restart' onclick="return runApp();">
-			</div>
+				<input type='button' value='Restart' onclick="return runApp('final-stats');">
+			</div> -->
 		</div>
 
 		<div class="hunter-stats">
