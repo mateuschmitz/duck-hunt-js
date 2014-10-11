@@ -1,5 +1,20 @@
+html {
+	font-family: Verdana;
+}
+
 body {
 	background: #F1F1F1;
+}
+
+.layer {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	position: fixed;
+	opacity: 0.2;
+	display: block;
 }
 
 .hunt-space {
@@ -26,8 +41,10 @@ body {
 	width: auto;
 	height: auto;
 	font-size: 35px;
-	margin-top: 220px;
+	margin-top: -320px;
 	margin-left: 42%;
+	position: fixed;
+	z-index: 999;
 }
 
 .reload-button {
@@ -75,13 +92,18 @@ body {
 }
 
 .final-stats {
-	width: 230px;
-	height: 200px;
+	width: 280px;
+	height: 230px;
 	font-size: 35px;
-	margin-top: 150px;
+	margin-top: -320px;
 	margin-left: 40%;
-	background: blue;
+	background: #FFF;
 	text-align: center;
+	display: none;
+	position: fixed;
+	z-index: 999;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px #000;
 }
 
 #start-button {
