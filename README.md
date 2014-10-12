@@ -3,7 +3,7 @@ Duck Junt Js
 
 Jogo desenvolvido para a disciplina de Web Design II do professor Daniel Dalalana, do curso de Sistemas para Internet da Universidade Feevale.
 
-## INSTRUÇÕES ##
+**INSTRUÇÕES**
 
 Mate quantos patos conseguir, o game não possui tempo. As condições de game over e para prosseguir são as seguintes:
 
@@ -11,7 +11,7 @@ Mate quantos patos conseguir, o game não possui tempo. As condições de game o
 - 10 patos mortos lhe dão uma nova vida
 - Você pode recarregar a arma quantas vezes quiser
 
-## TODO ##
+**MELHORIAS**
 
 - Adicionar documentação dos métodos em inglês
 - README em inglês
@@ -23,6 +23,6 @@ Mate quantos patos conseguir, o game não possui tempo. As condições de game o
 - Melhorar engine para gerar movimentos aleatórios dos patos
 - Melhorar interface, se possível para que seja responsiva
 
-## LICENÇA ##
+**LICENÇA**
 
-Liberado sob a licença Apache 2.0[LICENSE]
+Liberado sob a licença [Apache 2.0](LICENSE)
