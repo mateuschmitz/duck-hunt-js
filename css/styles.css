@@ -1,3 +1,6 @@
+/**
+ * CONFIGURAÇÕES GERAIS
+ */
 html {
 	font-family: Verdana;
 }
@@ -17,6 +20,9 @@ body {
 	display: block;
 }
 
+/**
+ * HUNT SPACE
+ */
 .hunt-space {
 	width: 80%;
 	height: 465px;
@@ -29,6 +35,9 @@ body {
 	background-size: 100%;
 }
 
+/**
+ * HUNTER STATS
+ */
 .hunter-stats {
 	width: 80%;
 	height: 50px;
@@ -37,38 +46,10 @@ body {
 	border: solid 1px #000;
 }
 
-.start-button-screen {
-	width: auto;
-	height: auto;
-	font-size: 35px;
-	margin-top: -320px;
-	margin-left: 42%;
-	position: fixed;
-	z-index: 999;
-}
-
-.reload-button {
-	float: right;
-	width: auto;
-	height: 50px;
-}
-
-.div-bullets{
-	width: 200px;
-	height: 50px;
-	background: ;
-	float: right;
-	font-size: 20px;
-}
-
-.div-bullets span {
-	margin-left: 50px;
-}
-
 .div-score {
 	width: 200px;
 	height: 50px;
-	background: ;
+	/*background: ;*/
 	float: left;
 	font-size: 20px;
 }
@@ -80,7 +61,7 @@ body {
 .div-lifes {
 	width: 200px;
 	height: 50px;
-	background: ;
+	/*background: ;*/
 	float: left;
 	font-size: 20px;
 }
@@ -91,6 +72,40 @@ body {
 	margin-left: 110px
 }
 
+.div-bullets{
+	width: 200px;
+	height: 50px;
+	/*background: ;*/
+	float: right;
+	font-size: 20px;
+}
+
+.div-bullets span {
+	margin-left: 50px;
+}
+
+.reload-button {
+	float: right;
+	width: auto;
+	height: 50px;
+}
+
+/**
+ * START BUTTON
+ */
+.start-button-screen {
+	width: auto;
+	height: auto;
+	font-size: 35px;
+	margin-top: -320px;
+	margin-left: 42%;
+	position: fixed;
+	z-index: 999;
+}
+
+/**
+ * TELA DE GAME OVER/RESTART
+ */
 .final-stats {
 	width: 280px;
 	height: 230px;
@@ -106,13 +121,30 @@ body {
 	box-shadow: 2px 2px 2px #000;
 }
 
-#start-button {
-	height: 49px;
-	width: 80px;
+.final-stats strong {
+	color: red;
+	text-decoration: underline;
+}
+
+.label-score {
+	margin-top: 100px;
+	font-size: 17px;
+}
+
+#final-score {
+	color: blue;
+}
+
+.restart-button{
+	width: 250px;
+	height: 50px;
+	margin: 0 auto;
+	font-size: 20px;
+	margin-top: 30px;
 }
 
 /**
- * voo
+ * SPRITE DOS PATOS (DIREITA E ESQUERDA)
  */
 .duck-flying-right {
 	width: 104px;
@@ -128,17 +160,16 @@ body {
 	animation: fly .8s steps(9) infinite;
 }
 
+/**
+ * ANIMAÇÃO DO MOVIMENTO DAS ASAS
+ */
 @keyframes fly {
 	100% {background-position: -940px;}
 }
 
 /**
- * move-one
+ * MOVIMENTOS DOS CINCO PATOS
  */
-/*#duck-move-one {
-	animation: move_one 10s infinite;
-}*/
-
 @keyframes move_one {
 	0%   {margin-left: -10%;  margin-top:  5px;}
 	5%   {margin-left:  10%;  margin-top: 10px;}
@@ -162,13 +193,6 @@ body {
 	95%  {margin-left:  98%;  margin-top: 10px;}
 	100% {margin-left: 110%;  margin-top:  0;}
 }
-
-/**
- * move-two
- */
-/*#duck-move-two {
-	animation: move_two 15s infinite;
-}*/
 
 @keyframes move_two {
 	0%   {margin-left: 100%; margin-top:  5px;}
@@ -194,13 +218,6 @@ body {
 	100% {margin-left: -10%; margin-top:  0;}
 }
 
-/**
- * move-three
- */
-/*#duck-move-three {
-	animation: move_three 5s infinite;
-}*/
-
 @keyframes move_three {
 	0%   {margin-left: -10%;  margin-top: 10px;}
 	5%   {margin-left:  10%;  margin-top:  8px;}
@@ -225,13 +242,6 @@ body {
 	100% {margin-left: 100%;  margin-top:  0;}
 }
 
-/**
- * move-four
- */
-/*#duck-move-four {
-	animation: move_four 20s infinite;
-}*/
-
 @keyframes move_four {
 	0%   {margin-left: 100%; margin-top:  5px;}
 	5%   {margin-left:  88%; margin-top: 10px;}
@@ -255,13 +265,6 @@ body {
 	95%  {margin-left:  12%; margin-top: 11px;}
 	100% {margin-left: -10%; margin-top:  0;}
 }
-
-/**
- * move-five
- */
-/*#duck-move-five {
-	animation: move_five 17s infinite;
-}*/
 
 @keyframes move_five {
 	0%   {margin-left: -10%;  margin-top: 11px;}

@@ -1,13 +1,22 @@
 /**
- * SETTINGS
+ * CONFIGURAÇÕES
  */
+//número de tiros errados
 var shotErrors     = 0;
+//número de patos acertados
 var shotAsserts    = 0;
-var numMaxDuck     = 5; //máx 5
+//máximo de patos na tela(máx 5)
+var numMaxDuck     = 5;
+//classes responsáveis pelo movimento na tela
 var animationClass = ['one', 'two', 'three', 'four', 'five'];
 
 /**
- * Start App
+ * Inicia o jogo
+ * 
+ * - Remove as telas de start/game over e a layer que esmaece a tela
+ * - Seta o número de balas e de vidas
+ * - Reinicia a contagem de erros e acertos
+ * - Adiciona os patos necessários a tela, conforme configurado
  */
 runApp = function (element) {
 
@@ -26,7 +35,11 @@ runApp = function (element) {
 };
 
 /**
- * Adiciona novos patos a tela
+ * Adiciona patos a tela
+ * 
+ * - Utiliza as classes para definir qual pato vai para a tela
+ * - Não sorteia o pato, gera de forma sequencial conforme configurado
+ * - Usa a função velocityLevel para definir o nível de dificuldade
  */
 generateAleatoryDuck = function () {
 
@@ -65,7 +78,12 @@ generateAleatoryDuck = function () {
 };
 
 /**
- * Função que controla o número de balas restantes na arma
+ * Controla o número de balas restantes
+ *
+ * - Se o número de balas for igual a 0 gera o alerta para recarregar
+ * - Senão reduz o número de balas em 1
+ * - Verifica o número de erros atualmente e caso seja igual a 5 reduz uma vida
+ * - Se for o quinto erro e a última vida, encerra o jogo
  */
 shot = function() {
 
@@ -84,7 +102,7 @@ shot = function() {
 			if (numLifes == 1) {
 				//remover a vida
 				document.getElementById('num-lifes').innerHTML = numLifes - 1;
-				//zerar o game -> remover os elementos ou pausar
+				//zerar o game -> remover os elementos
 				while (huntSpace.firstChild) {
 					huntSpace.removeChild(huntSpace.firstChild);
 				}
@@ -107,7 +125,12 @@ shot = function() {
 };
 
 /**
- * Caso o pato seja acertado, aumenta o score
+ * Função disparada ao acertar um pato
+ *
+ * - se o número de balas for menor que zero, não mata o pato
+ * - se for maior que zero aumenta o score e o número de acertos
+ * - se o número de acertos for igual ou maior que 10 aumenta uma vida e zera os acertos
+ * - Remove o pato da tela e chamada generateAleatoryDuck 
  */
 rightShot = function(duck) {
 
@@ -136,14 +159,18 @@ rightShot = function(duck) {
 };
 
 /**
- * Recarrega a arma(+15 balas)
+ * Recarrega a arma
+ *
+ * - Retorna o número de balas para 15
  */
 reloadGun = function() {
 	document.getElementById('num-bullets').innerHTML = 15;
 };
 
 /**
- * Retorna a velocidade máxima dos patos
+ * Retorna a velicidade máxima dos patos
+ *
+ * - Retorna com base no score atual
  */
 velocityLevel = function (score) {
 	score = parseInt(score, 10);

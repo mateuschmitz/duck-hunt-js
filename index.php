@@ -3,17 +3,17 @@
 	<head>
 		<meta charset='utf-8'>
 		<title>Duck Junt Js</title>
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.min.css">
 	</head>
 	<body>
 		<div class='layer'></div>
 		<div id="hunt-space" class="hunt-space" onclick="return shot();">
 		</div>
 		<div class='final-stats'>
-			<strong>GAME OVER</strong><br /><br />
-			SCORE <br />
-			<span id='final-score'></span><br />
-			<input type='button' value='Restart' onclick="return runApp('final-stats');">
+			<strong>GAME OVER</strong>
+			<span class="label-score">SCORE</span><br />
+			<span id='final-score'>000000</span>
+			<input type='button' class="restart-button" value='RESTART' onclick="return runApp('final-stats');">
 		</div>
 		<input type='button' value='START ►' class='start-button-screen' onclick="return runApp('start-button-screen');">
 
@@ -43,6 +43,6 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/scripts.min.js"></script>
 	</body>
 </html>
