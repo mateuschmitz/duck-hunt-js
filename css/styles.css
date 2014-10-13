@@ -151,6 +151,7 @@ body {
 	height: 80px;
 	background-image: url('../image/sprite-duck-right.png');
 	animation: fly .8s steps(9) infinite;
+	-webkit-animation: fly .8s steps(9) infinite;
 }
 
 .duck-flying-left {
@@ -158,6 +159,7 @@ body {
 	height: 80px;
 	background-image: url('../image/sprite-duck-left.png');
 	animation: fly .8s steps(9) infinite;
+	-webkit-animation: fly .8s steps(9) infinite;
 }
 
 /**
