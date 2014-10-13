@@ -57,7 +57,8 @@ generateAleatoryDuck = function () {
 			//adiciona um pato com velocidade baseada na pontuação atual
 			//reduz o máximo em 2s a cada 1000 pontos
 			duck_move.setAttribute('style',
-					'animation: move_' + animationClass[i] + ' ' + (Math.floor(Math.random() * velocityLevel(actualScore)) + 5) + 's infinite;'
+					'animation: move_' + animationClass[i] + ' ' + (Math.floor(Math.random() * velocityLevel(actualScore)) + 5) + 's infinite;
+					 -webkit-animation: move_'+ animationClass[i] + ' ' + (Math.floor(Math.random() * velocityLevel(actualScore)) + 5) + 's infinite;'
 					);
 
 			//cria a div com o sprite do pato
